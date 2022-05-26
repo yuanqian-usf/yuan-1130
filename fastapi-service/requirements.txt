@@ -1,0 +1,3 @@
+fastapi==0.78.0
+spaCy==3.3.0
+uvicorn[standard]

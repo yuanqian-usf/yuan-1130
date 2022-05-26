@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  fastapi-service:
+    build: fastapi-service
+    ports:
+      - 8080:8080
+  waveui-service:
+    build: waveui-service
+    ports:
+      - "10101:10101"
+    environment:
+      FAST_API_ENDPOINT : "http://fastapi-service:8080"
+    depends_on:
+      - fastapi-service
